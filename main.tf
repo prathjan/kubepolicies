@@ -47,7 +47,7 @@ module "infra_config_policy" {
   device_name      = local.device_name
   vc_portgroup     = local.portgroup
   vc_datastore     = local.datastore
-  vc_cluster       = local.cluster
+  vc_cluster       = local.vspherecluster
   vc_resource_pool = local.resource_pool
   vc_password      = local.password
   org_name         = local.organization
@@ -64,7 +64,7 @@ module "ip_pool_policy" {
   primary_dns      = local.primary_dns
 #  secondary_dns    = var.ip_secondary_dns
 
-  org_name = var.organization
+  org_name = local.organization
 #  tags     = var.tags
 }
 
