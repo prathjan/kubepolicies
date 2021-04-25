@@ -9,6 +9,23 @@ data "terraform_remote_state" "global" {
   }
 }
 
+variable "api_key" {
+  type        = string
+  description = "API Key"
+}
+variable "secretkey" {
+  type        = string
+  description = "Secret Key"
+}
+variable "password" {
+  type        = string
+  description = "vsphere password"
+}
+variable "globalwsname" {
+  type        = string
+  description = "TFC WS from where to get the params"
+}
+
 terraform {
   required_providers {
     intersight = {
