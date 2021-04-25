@@ -3,13 +3,13 @@ variable "organization" {
   type        = string
   description = "Org"
 }
-variable "api_private_key" {
-  type        = string
-  description = "Secret Key"
-}
-variable "api_key_id" {
+variable "api_key" {
   type        = string
   description = "API Key"
+}
+variable "secretkey" {
+  type        = string
+  description = "Secret Key"
 }
 variable "org_name" {
   type        = string
