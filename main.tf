@@ -111,13 +111,6 @@ locals {
   vspherecluster = yamldecode(data.terraform_remote_state.global.outputs.vspherecluster)
   resource_pool = yamldecode(data.terraform_remote_state.global.outputs.resource_pool)
   password = yamldecode(data.terraform_remote_state.global.outputs.password)
-  ip_pool_policy = yamldecode(data.terraform_remote_state.global.outputs.ip_pool_policy)
-  starting_address = yamldecode(data.terraform_remote_state.global.outputs.starting_address)
-  pool_size = yamldecode(data.terraform_remote_state.global.outputs.pool_size)
-  netmask = yamldecode(data.terraform_remote_state.global.outputs.netmask)
-  gateway = yamldecode(data.terraform_remote_state.global.outputs.gateway)
-  primary_dns = yamldecode(data.terraform_remote_state.global.outputs.primary_dns)
-
 }
 
 
