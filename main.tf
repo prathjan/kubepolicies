@@ -45,11 +45,11 @@ module "infra_config_policy" {
   source           = "terraform-cisco-modules/iks/intersight//modules/infra_config_policy"
   name             = local.infra_config_policy 
   device_name      = local.device_name
-  vc_portgroup     = local.portgroup
+  vc_portgroup     = [local.portgroup]
   vc_datastore     = local.datastore
   vc_cluster       = local.vspherecluster
   vc_resource_pool = local.resource_pool
-  vc_password      = local.password
+  vc_password      = var.password
   org_name         = local.organization
 #  tags             = var.tags
 }
@@ -127,7 +127,6 @@ locals {
   datastore = yamldecode(data.terraform_remote_state.global.outputs.datastore)
   vspherecluster = yamldecode(data.terraform_remote_state.global.outputs.vspherecluster)
   resource_pool = yamldecode(data.terraform_remote_state.global.outputs.resource_pool)
-  password = yamldecode(data.terraform_remote_state.global.outputs.password)
 }
 
 
